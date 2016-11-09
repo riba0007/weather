@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Franklin", "Helvetica", "Arial", sans-serif;
+    color: #eee;
+}
+img {
+    max-width: 90%;
+}
+main{
+    margin: 0 auto;
+    max-width: 60em;
+}
+header{
+    text-align: center;
+    font-size: 1.2em;
+}
+footer{
+    margin-top: 3em;
+    margin-right: 3em;
+    text-align: right;
+    color: #638293;
+}
+footer p {
+    font-size: 0.8em;
+}
+div{
+    box-sizing: border-box;
+}
+h1, h3{
+    text-shadow: 1px 2px 4px #000;
+    margin-top: 1.5em;
+}
+h2{
+    display: inline-block;
+    padding-right: 0.4em;
+    font-size: 1.3em;
+}
+h3{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0.5em 0 0.5em 0;
+}
+spam{
+    font-size: 0.8em;
+    color: #ff9900;
+}
+p{
+    font-size: 0.8em;
+    margin: 0.5em 0 0.5em 0;
+}
+button {
+    float: right;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    color: #FFF;
+}
+button:hover {
+    text-shadow: 0 0 3px #000;
+}
+
+/*classes*/
+.main{
+    width: 100%;
+}
+.nextHours{
+    width: 95%;
+    margin: 2em auto 0em auto;
+}
+.hourly{
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+.weather{
+    width: 95%;
+    margin: 0.5em auto 0 auto;
+    display: none;
+    border-radius: 7px;
+    background: #638293;
+    box-shadow: 1px 1px 4px #000;
+}
+div[class*="current"],
+div[class*="12"],
+div[class*="6"]{
+    display: block;
+}
+.menu{
+    width: 100%;
+    background-color: #536E7A;
+    overflow: auto;
+    padding: 0.3em 2em;
+    box-shadow: 1px 1px 4px #000;
+}
+.menu p {
+    float: right;
+    padding: 0;
+    margin: 0.3em;
+    color: #638293;
+    font-size: 0.7em;
+}
+.header{
+    height: 30%;
+    padding: 0.3em 0.5em 0 0.8em;
+    background: linear-gradient(#536E7A, #638293);
+    border-radius: 7px;
+}
+.header .icon{
+    display: none;
+}
+.content{
+    height: 70%;
+    display: inline-block;
+    width: 100%;
+    padding: 0.3em 0.5em 0.3em 0.8em;
+}
+.content h2{
+    margin: 0;
+    padding-right: 0.7em;
+}
+.content spam{
+    font-weight: 700;
+}
+.icon{
+    float: left;
+    height: 100%;
+    width: 20%;
+    font-size: 4.5em;
+    text-align: center;
+}
+.summary{
+    width: 70%;
+    float: right;
+    padding-left: 1em;
+}
+
+
+/*Symbols*/
+.temp:after{
+    content: " \2103";
+}
+
+.appTemp:before{
+    content: "Real Feel: ";
+}
+
+.precip:before{
+    content: "Preciptation: ";
+}
+.precip:after{
+    content: "%";
+}
+
+.windSpeed:before{
+    content: "Wind Speed: ";
+}
+.windSpeed:after{
+    content: " km/h";
+}
+
+/*weather colours*/
+.clear-day{
+    background: linear-gradient(#28AFAF, #FFF);    
+}
+.clear-night{
+    background: linear-gradient(#0A5B77, #28AFAF);
+}
+.rain{
+    background: linear-gradient(#286C7C, #5B6E72);
+}
+.snow{
+    background: linear-gradient(#90A3A3, #FFF);
+}
+.sleet{
+    background: linear-gradient(#286C7C, #D7DADB);
+}
+.wind{
+    background: linear-gradient(#5D9BA5, #FFF);
+}
+.fog{
+    background: linear-gradient(#5B6E72, #D7DADB);
+}
+.cloudy{
+    background: linear-gradient(#B4CFD6, #FFF);
+}
+.partly-cloudy-day{
+    background: linear-gradient(#63B7B3, #FFF);
+}
+.partly-cloudy-night{
+    background: linear-gradient(#294F59, #28AFAF);
+}
+
+@media screen and (min-width: 600px){
+    
+    footer{
+        clear: both;
+        padding-top: 3em;
+    }
+    p{
+        font-size: 1em;
+    }
+    
+    /*classes*/
+    .hourly, .nextHours{
+        width: 90%;
+    }
+    .weather{
+        width: 49%;
+        margin: 0 0 0.5em 0;
+    }
+    .weather.current{
+        width: 90%;
+        margin: 2em auto 2em auto;
+    }
+    .header .icon{
+        display: inline-block;
+        font-size: 2em;
+        padding-right: 1em;
+        float: inherit;
+    }
+    .hourly .content .icon{
+        display: none;
+    }
+    .hourly .content .summary {
+        float: inherit;
+        padding-left: 0;
+    }
+    
+    div[class*="6"]{
+        display: none;
+    }
+    div[class*="12"],
+    div[class*="8"],
+    div[class*="4"]{
+        display: inline-block;
+        float: left;
+        margin: 0.5%;
+    }
+}
+@media screen and (min-width: 850px){
+    
+    p{
+        font-size: 0.7em;
+    }
+    spam{
+        font-size: 0.8em;
+    }
+    h2{
+        font-size: 1.7em;
+    }
+    h3{
+        font-size: 1.4em;
+    }
+    header{
+        font-size: 1.3em;
+    }
+    
+    .icon{
+        font-size: 5.5em;
+    }
+    .weather{
+        width: 24%;
+        margin: 0 0 0.5em 0;
+    }
+    .header .icon{
+        font-size: 1.3em;
+    }
+    .hourly h2{
+        font-size: 1.5em;
+    }
+    
+    div[class*="8"],
+    div[class*="4"]{
+        display: none;
+    }
+    div[class*="12"],
+    div[class*="3"],
+    div[class*="6"],
+    div[class*="9"]{
+        display: inline-block;
+        float: left;
+        margin: 0.5%;
+    }
+}
